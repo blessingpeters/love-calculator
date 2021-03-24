@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator😍💞💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background: #BBB;
+            color: #000;
+            font-family: 'Lemonada', cursive;
+            background-image: url("bb.jpg");
+            background-repeat: inherit;
+            background-size: cover;
+		}
+
+        h1 {
+            font-size: 45px;
+            color: #333	;
+        }
+
+        .input-box {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid #999;
+            outline: none;
+            width: 90%;
+            background-color: #FAFAFA;
+        }
+        button {
+            background-color: red;
+            color: #fff;
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-family: 'Lemonada', cursive;
+        }
+        .container {
+            width: 50%;
+            text-shadow:0 0 3px 0 rgba(0,0,0,0,3);
+            background-color: #FAFAFA;
+            padding: 20px;
+            margin: 5% auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 80%;
+            }
+        }
+    </style>
+
+    <!-- javascript -->
+    <script type="text/javascript">
+
+        function checklovepercentage(){
+
+            var name = document.getElementById('name').value;
+            var lname = document.getElementById('crushName').value;
+
+            if(name == ""){
+            alert('Please enter your name');
+            }else if (name.length <=2 ) {
+            alert('Min lenght is 3')
+            }else if(!isNaN(name)){
+            alert('Numbers are not allowed');
+            }
+            else if(lname == ""){
+            alert('Please enter your love name');
+            }else if (lname.length <=2 ) {
+            alert('Min lenght is 3')
+            }else if(!isNaN(lname)){
+            alert('Numbers are not allowed');
+            }
+            else{
+
+            var lovedata = Math.random() * 100;
+            lovedata = Math.floor(lovedata) +1;
+            document.getElementById('lovevalue').value = lovedata; 
+            }
+            
+            if (lovedata > 70) {
+                document.getElementById('lovevalue').value = ("Your Love Percentage Is " + lovedata + "%" + " - Yayyy!! You Love Each Other😍💞");
+            }
+            else if (lovedata > 30 && lovedata <= 70) {
+                document.getElementById('lovevalue').value = ("Your Love Percentage Is " + lovedata + "%"  + " - There's hope for you keep pushing🤞.");
+
+            }else{
+
+                document.getElementById('lovevalue').value = ("Your Love Percentage Is " + lovedata + "%" + " - Sorry! there's no hope for you, find another crush");
+            }
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Love Calculator💞😍💕</h1>
+       <form>
+           <input type="name" id="name" class="input-box" placeholder="ENTER YOUR NAME">
+           <input type="name" id="crushName" class="input-box" placeholder="ENTER YOUR CRUSH NAME">
+           
+           <button type="button" class="submit"  onclick="checklovepercentage()">Submit</button>
+
+           <textarea name="" id="lovevalue" class="input-box" cols="16" rows="3" placeholder="LOVE PERCENTAGE"></textarea>
+
+        </form>
+
+        <p>coded by Blessing Peter</p>
+    </div>
+</body>
+</html>
