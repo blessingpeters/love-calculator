@@ -11,11 +11,10 @@
             box-sizing: border-box;
         }
         body {
-            background: #BBB;
             color: #000;
             font-family: 'Lemonada', cursive;
             background-image: url("bb.jpg");
-            background-repeat: inherit;
+            background-repeat: no-repeat;
             background-size: cover;
 		}
 
@@ -28,13 +27,14 @@
             border-radius: 10px;
             padding: 10px;
             margin: 20px 0;
-            border: 2px solid #999;
+            border: none;
             outline: none;
             width: 100%;
-            background-color: #FAFAFA;
+            background:#ecf0f3;
+            box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
         }
         button {
-            background-color: red;
+            background: red;
             color: #fff;
             width: 100%;
             padding: 10px;
@@ -44,16 +44,18 @@
             border: none;
             outline: none;
             cursor: pointer;
+            box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
             font-family: 'Lemonada', cursive;
+            transition: 0.5s;
         }
         .container {
             width: 50%;
             text-shadow:0 0 3px 0 rgba(0,0,0,0,3);
-            background-color: #FAFAFA;
+            background-color: #ecf0f3;
             padding: 20px;
             margin: 5% auto;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 10px;  
         }
         p {
             font-size: 10px;
@@ -63,10 +65,10 @@
                 width: 90%;
             }
             h1 {
-                font-size: 40px; 
+                font-size: 40px;
             }
-            
         }
+
     </style>
 
     <!-- javascript -->
